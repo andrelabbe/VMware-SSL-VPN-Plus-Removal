@@ -97,6 +97,7 @@ remove-item -path "HKLM:\SOFTWARE\WOW6432Node\VMware, Inc.\" -recurse -ErrorActi
 remove-item -path "HKLM:\SYSTEM\CurrentControlSet\Services\SVPadapter\" -recurse -ErrorAction SilentlyContinue
 remove-item -path "HKLM:\SYSTEM\CurrentControlSet\Services\SVPRedirector.sys\" -recurse -ErrorAction SilentlyContinue
 remove-item -path "HKCU:\SOFTWARE\VMware, Inc.\" -recurse -ErrorAction SilentlyContinue
+remove-item -path "HKCU:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SVPClient\" -recurse -ErrorAction SilentlyContinue
 WriteLog "All relevent registry entries should be gone"
 # All (?) Relevant Registry entries removed
 #
@@ -108,7 +109,7 @@ Remove-item "C:\Windows\System32\drivers\SVPRedirector.sys" -force -erroraction 
 WriteLog "Deleting Shortcut if exist"
 Remove-Item "C:\Users\Public\Desktop\VMwareTray.*" -Recurse -force -erroraction SilentlyContinue
 WriteLog "deleting VMware folders if exist"
-$path = "C:\Program Files (x86)\VMware\"
+#$path = "C:\Program Files (x86)\VMware\"
 Remove-Item -R "C:\Program Files (x86)\VMware\*" -force -erroraction SilentlyContinue
 Remove-Item -R "C:\Program Files (x86)\VMware" -force -erroraction SilentlyContinue
 # All done
