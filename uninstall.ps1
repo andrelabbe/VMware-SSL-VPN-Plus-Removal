@@ -96,8 +96,8 @@ remove-item -path "HKLM:\SYSTEM\CurrentControlSet\Services\SSL VPN-Plus Service\
 remove-item -path "HKLM:\SOFTWARE\WOW6432Node\VMware, Inc.\" -recurse -ErrorAction SilentlyContinue
 remove-item -path "HKLM:\SYSTEM\CurrentControlSet\Services\SVPadapter\" -recurse -ErrorAction SilentlyContinue
 remove-item -path "HKLM:\SYSTEM\CurrentControlSet\Services\SVPRedirector.sys\" -recurse -ErrorAction SilentlyContinue
+remove-item -path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SVPClient\" -recurse -ErrorAction SilentlyContinue
 remove-item -path "HKCU:\SOFTWARE\VMware, Inc.\" -recurse -ErrorAction SilentlyContinue
-remove-item -path "HKCU:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SVPClient\" -recurse -ErrorAction SilentlyContinue
 WriteLog "All relevent registry entries should be gone"
 # All (?) Relevant Registry entries removed
 #
